@@ -21,7 +21,7 @@ function validateName() {
 
 function validateEmail() {
     var Name = document.getElementById("email").value;
-    var re2 = /\S+@\S+/;
+    var re2 = /\S+@\S+\.\S+/;
     if (re2.test(Name)) {
       document.getElementById("emailPrompt").style.color = "Green";
       document.getElementById("emailPrompt").innerHTML = "<strong>VALID Email</strong>";
