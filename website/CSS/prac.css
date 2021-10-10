@@ -12,6 +12,7 @@
 .logo {
   margin: 4px;
   border-radius: 50%;
+  width: 50px;
 }
 
 .plant img {
@@ -39,7 +40,12 @@ h3 {
   padding: 14px 16px;
   text-decoration: none;
 }
-
+.navbar #flip{
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
 .dropdown {
   float: left;
   overflow: hidden;
@@ -55,6 +61,7 @@ h3 {
   font-family: inherit;
   margin: 0;
 }
+.navbar #flip:hover{background-color: red;}
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
@@ -86,6 +93,7 @@ h3 {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 
 /* .mySlides {
   display: none;
@@ -192,4 +200,89 @@ footer p2{
 footer a{
   color:grey ;
   font-size: 12px;
+}
+.page_map {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.bg-image {
+
+  background-image: url("garden.jpg");
+  background-size: cover;
+  height: 100vh; 
+  filter: blur(4px);
+  background-repeat: no-repeat;
+
+}
+.services{
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color:white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.services button{
+    padding: 10px;
+    margin: 20px;
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: .5s;
+
+}
+.services button:hover{
+    
+    background-color: chartreuse;
+}
+.services h1{
+  color: #f1f1f1;
+}
+
+
+#panel {
+  display: none;
+}
+
+.feedback_col{
+  text-align: center;
+  font-size: 10px;
+  width: 300px;
+  height: 40p;
+  color: black;
+ 
+}
+
+.port {
+  text-align: center;
+}
+
+.photoes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.photoes img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.hide {
+  display: none;
+  position: relative;
+}
+    
+.photoes img:hover + .hide {
+  display: block;
+  color:black;
 }

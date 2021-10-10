@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -10,12 +11,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="/website/CSS/prac.css" />
+    <script src="/website/plant.js"></script>
   </head>
 
   <body>
     <div style="background-color: black">
       <nav class="navbar">
-        <img src="/website/Image/logo.jpg" class="logo">
+        <img src="/website/Image/logo.jpg" class="logo" />
         <h3>Garden at Your Home</h3>
         <a href="/website/Proj.html">Home</a>
         <div class="dropdown">
@@ -24,23 +26,27 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">About Us</a>
-            <a href="#">Our vision</a>
-            <a href="#">Our value</a>
+            <a href="#contact">About Us</a>
+            <a href="#contact">Our vision</a>
+            <a href="#contact">Our value</a>
           </div>
         </div>
 
-        <a href="/services">Services</a>
+        <a href="/website/service.html">Services</a>
         <a href="/website/portfolio.html">Portfolio</a>
-        <a href="/pricing">Pricing</a>
-        <a href="/contact">Contact</a>
+        <div >
+          <div id="flip">Pricing</div>
+          <div id="panel">In your budget!</div>
+          <div id="panel">In your budget!</div>
+      </div>
+        <a href="#contact">Contact</a>
       </nav>
 
       <ul class="medium">
         <div class="plant" style="width: 600px">
           <img
             class="mySlides"
-            src="/website/Image/plant1.jpg"
+            src="/website/Image/plant8.jpg"
             style="width: 100%"
           />
           <img
@@ -136,7 +142,7 @@
         </ul>
       </div>
 
-      <div class="contact">
+      <div class="contact" id="contact">
         <h2>Contact Us</h2>
         <ul class="form">
           <form>
@@ -148,7 +154,9 @@
                 id="name"
                 name="name"
                 placeholder="Your name.."
+                onblur="validateName()"
               />
+              <label class="feedback_col"><span id="namePrompt">&nbsp;</span></label>
             </div>
 
             <div style="margin: 3px">
@@ -157,8 +165,10 @@
                 type="text"
                 id="email"
                 name="email"
-                placeholder="Eg. abc@gmail.com"
+                placeholder="Eg. abc@xyz.com"
+                onblur="validateEmail()"
               />
+              <label class="feedback_col"><span id="emailPrompt">&nbsp;</span></label>
             </div>
             <div style="margin: 3px">
               <label for="country">Country</label>
@@ -214,11 +224,11 @@
         </div>
         <div>
           <h6>Usefull Links</h6>
-          <a href="/">Home</a><br />
-          <a href="/services">Services</a><br />
+          <a href="/website/Proj.html">Home</a><br />
+          <a href="/website/service.html">Services</a><br />
           <a href="/website/portfolio.html">Portfolio</a><br />
           <a href="/pricing">Pricing</a><br />
-          <a href="/contact">Contact</a><br />
+          <a href="#contact">Contact</a><br />
         </div>
         <div>
           <h6>Our Services</h6>
@@ -229,24 +239,24 @@
         </div>
       </footer>
     </div>
-
-    <script type="text/javascript">
-      var myIndex = 0;
-      carousel();
-
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {
-          myIndex = 1;
-        }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 2000); // Change image every 2 seconds
-      }
-    </script>
   </body>
+
+  <script type="text/javascript">
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1;
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+  </script>
 </html>
